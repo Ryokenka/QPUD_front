@@ -2,6 +2,8 @@
   display: flex;
   align-items: center;
   margin: 25px;
+  background-color: #D3D3D3;
+
 
   .title {
     text-align: center;
@@ -26,17 +28,20 @@
     .sun {
       width: 90px;
       margin-left: 35px;
+      background-color: #D3D3D3;
     }
 
     .card {
       border: none;
       display: flex;
       align-items: baseline;
+      background-color: #D3D3D3;
 
       .card-text {
         font-family: "Dancing Script", sans-serif;
         font-size: x-large;
-        margin-top: 0
+        margin-top: 0;
+        background-color: #D3D3D3;
       }
     }
   }
