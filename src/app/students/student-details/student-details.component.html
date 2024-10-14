@@ -1,5 +1,5 @@
 <ng-container *ngIf="student$ | async; let student">
-  <h1>Student's personal data</h1>
+  <h1>Serveur</h1>
   <form (ngSubmit)="save(student)" #studentForm="ngForm">
     <div class="form-group">
       <label for="firstName">Nom du serveur</label>
@@ -9,7 +9,7 @@
              #firstName="ngModel">
       <div [hidden]="firstName.valid || firstName.pristine"
            class="alert alert-danger">
-        First Name is required
+        le prénom n'est pas valide
       </div>
     </div>
 
@@ -21,26 +21,27 @@
              #lastName="ngModel">
       <div [hidden]="lastName.valid || lastName.pristine"
            class="alert alert-danger">
-        Last Name is required
+        le nom n'est pas valide
       </div>
     </div>
 
     <div class="form-group">
       <label for="birthDate">Nombre de place</label>
-      <input type="date" class="form-control" id="birthDate"
+      <input type="text" class="form-control" id="birthDate"
              required
-             [ngModel]="student.birthdate | date:'yyyy-MM-dd'" name="birthDate"
+             [ngModel]="student.birthdate" name="birthDate"
              #birthDate="ngModel" >
-      <div [hidden]="birthDate.pristine && birthDate.untouched || birthDate.value !== today.toISOString().slice(0, 10)"
+      <div [hidden]="birthDate.valid || birthDate.pristine  "
            class="alert alert-danger">
-        Birthdate is required
+        Le nombre de place n'est pas valide
       </div>
     </div>
 
 
 
 
-    <button type="submit" mat-raised-button color="primary" [disabled]="!studentForm.form.valid">Save</button>
+
+    <button type="submit" mat-raised-button color="primary" [disabled]="!studentForm.form.valid">crée</button>
   </form>
 
 </ng-container>

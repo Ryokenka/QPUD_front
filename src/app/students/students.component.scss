@@ -29,4 +29,23 @@
     height: 3rem;
     width: auto;
   }
+
+  .join-button {
+    background-color: #4CAF50; /* Vert */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 12px; /* Coins arrondis */
+    transition: background-color 0.3s ease;
+  }
+
+  .join-button:hover {
+    background-color: #45a049
+
+  }
 }

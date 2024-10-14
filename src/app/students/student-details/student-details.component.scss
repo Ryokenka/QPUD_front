@@ -5,7 +5,9 @@
   flex-direction: column;
   padding: 30px;
   background-color: #D3D3D3;
-  color: theme.$white h1 {
+  color: black;
+
+  h1 {
     color: theme.$common-purple;
     font-size: xx-large;
   }
@@ -54,3 +56,4 @@
     }
   }
 }
+
