@@ -66,8 +66,5 @@ export class StudentDetailsComponent {
     }
   }
 
-  // because the format of the date doesn't fit date picker
-  updateBirthdate($event: any, student: Student) {
-    student.birthdate = new Date($event)
-  }
+
 }

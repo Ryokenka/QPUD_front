@@ -1,23 +1,21 @@
 <div class="d-flex align-items-center">
-  <h1>Students</h1>
+  <h1>Rejoindre un serveur</h1>
   <a mat-raised-button color="primary" routerLink="/student-details/new">New</a>
 </div>
 <table class="table table-hover">
   <thead>
   <tr>
-    <th scope="col">First Name</th>
-    <th scope="col">Last Name</th>
-    <th scope="col">Birthdate</th>
-    <th scope="col">Major</th>
-    <th scope="col">Delete</th>
+    <th scope="col">Nom du serveur</th>
+    <th scope="col">Nom du hôte</th>
+    <th scope="col">Nombre de place </th>
+    <th scope="col">Rejoindre</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let student of (students$ | async)" routerLink="/student-details/{{student.id}}">
     <td>{{ student.firstName }}</td>
     <td>{{ student.lastName }}</td>
-    <td>{{ student.birthdate | date : "dd/MM/yyyy" }}</td>
-    <td>{{ student.major!!.name }}</td>
+    <td>{{ student.birthdate }}</td>
     <td>
       <button mat-icon-button color="warn" (click)="deleteStudent($event, student)">
         <mat-icon>delete</mat-icon>
