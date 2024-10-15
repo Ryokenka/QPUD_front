@@ -11,7 +11,7 @@ export class StudentService {
   constructor(private http: HttpClient) {
   }
 
-  private studentsUrl = "http://localhost:8080/students"
+  private studentsUrl = "http://localhost:8080/users"
 
   findAll(): Observable<Student[]> {
     return this.http.get<Student[]>(this.studentsUrl)

@@ -17,10 +17,10 @@ export class StudentDetailsComponent {
   student$: Observable<Student> = this._route.data.pipe(map((data) => data["student"]))
   allMajors$: Observable<Major[]> | undefined
   allCourses$: Observable<Course[]> | undefined
-  majorSelectModel: Major | null = null
+
   courseSelectModel: Course | null = null
   notSelectedCourse: boolean | undefined
-  today = new Date(Date.now())
+
 
   constructor(
     private _route: ActivatedRoute,
@@ -51,9 +51,6 @@ export class StudentDetailsComponent {
   save(student: Student) {
     const id = this._route.snapshot.params["id"]
 
-    if (this.majorSelectModel !== null) {
-      student.major = this.majorSelectModel
-    }
 
     if (id == "new") {
       this.studentService.create(student).subscribe(() => {

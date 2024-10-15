@@ -7,6 +7,7 @@
   <tr>
     <th scope="col">Nom du serveur</th>
     <th scope="col">Nom du hôte</th>
+    <th scope="col">Nombre de question </th>
     <th scope="col">Nombre de place </th>
     <th scope="col">Rejoindre</th>
   </tr>
@@ -15,7 +16,8 @@
   <tr *ngFor="let student of (students$ | async)" routerLink="/student-details/{{student.id}}">
     <td>{{ student.firstName }}</td>
     <td>{{ student.lastName }}</td>
-    <td>{{ student.birthdate }}</td>
+    <td>{{ student.place }}</td>
+    <td>{{ student.qs }}</td>
     <td>
       <button class="join-button">Rejoindre</button>
     </td>

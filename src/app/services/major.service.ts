@@ -13,7 +13,7 @@ export class MajorService {
   constructor(private http: HttpClient) {
   }
 
-  private majorUrl = "http://localhost:8080/majors"
+  private majorUrl = "http://localhost:8080/users"
 
   findAll(): Observable<Major[]> {
     return this.http.get<Major[]>(this.majorUrl)

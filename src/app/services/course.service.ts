@@ -10,7 +10,7 @@ export class CourseService {
   constructor(private http: HttpClient) {
   }
 
-  private coursesUrl = "http://localhost:8080/courses"
+  private coursesUrl = "http://localhost:8080/users"
 
   findAll(): Observable<Course[]> {
     return this.http.get<Course[]>(this.coursesUrl)
