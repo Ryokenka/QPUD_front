@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de Questions</title>
+
+</head>
+<body>
+<div class="container">
+  <h1>Bienvenue dans  la creation d'un serveur</h1>
+  <form id="quiz-form">
+    <label for="salle">serveur:</label>
+    <input type="text" id="salle" name="salle" placeholder="Entrez le nom du serveur" required>
+
+    <label for="nombre-questions">Nombre de questions:</label>
+    <select id="nombre-questions" name="nombre-questions">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+    </select>
+
+    <label for="niveau">Niveau des questions:</label>
+    <select id="niveau" name="niveau">
+      <option value="facile">Facile</option>
+      <option value="moyen">Moyen</option>
+      <option value="difficile">Difficile</option>
+    </select>
+
+    <label for="classe">Classe des questions:</label>
+    <select id="classe" name="classe">
+      <option value="math">Mathématiques</option>
+      <option value="science">Sciences</option>
+      <option value="histoire">Histoire</option>
+    </select>
+
+    <button type="submit" id="jouer-btn">crée</button>
+  </form>
+</div>
+
+
+</body>
+</html>
+

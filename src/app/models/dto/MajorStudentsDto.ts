@@ -1,5 +1,5 @@
-import { Major } from "../major.model"
-import { Student } from "../student.model"
+import { Major } from "../score.model"
+import { Student } from "../multi.model"
 
 export class MajorStudentsDto {
   major: Major

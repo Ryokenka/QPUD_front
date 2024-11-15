@@ -2,14 +2,14 @@ import { Component, OnInit } from "@angular/core"
 import { map, Observable } from "rxjs"
 import { ActivatedRoute } from "@angular/router"
 import { MajorStudentsDto } from "../../models/dto/MajorStudentsDto"
-import { Student } from "../../models/student.model"
+import { Student } from "../../models/multi.model"
 
 @Component({
   selector: "epf-major-students",
-  templateUrl: "./major-students.component.html",
-  styleUrls: ["./major-students.component.scss"],
+  templateUrl: "./score-game.component.html",
+  styleUrls: ["./score-game.component.scss"],
 })
-export class MajorStudentsComponent implements OnInit {
+export class ScoreGameComponent implements OnInit {
   studentsFromMajor$: Observable<Student[]> = this._route.data.pipe(map((data) => data["studentsFromMajor"]))
 
   constructor(private _route: ActivatedRoute) {

@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core"
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from "@angular/router"
 import { Observable } from "rxjs"
-import { MajorService } from "../../services/major.service"
-import { Student } from "../../models/student.model"
+import { ScoreService } from "../../services/score.service"
+import { Student } from "../../models/multi.model"
 
 @Injectable({
   providedIn: "root",
 })
-export class MajorStudentsResolver implements Resolve<Student[]> {
-  constructor(private majorService: MajorService) {
+export class ScoreGameResolver implements Resolve<Student[]> {
+  constructor(private majorService: ScoreService) {
   }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Student[]> {

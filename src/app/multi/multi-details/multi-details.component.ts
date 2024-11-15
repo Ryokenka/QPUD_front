@@ -1,32 +1,32 @@
 import { Component, OnInit } from "@angular/core"
 import { map, Observable } from "rxjs"
-import { Student } from "models/student.model"
+import { Student } from "models/multi.model"
 import { ActivatedRoute, Router } from "@angular/router"
 import { Course } from "models/course.model"
 import { CourseService } from "services/course.service"
-import { StudentService } from "services/student.service"
-import { Major } from "../../models/major.model"
-import { MajorService } from "../../services/major.service"
+import { MultiService } from "services/multi.service"
+import { Major } from "../../models/score.model"
+import { ScoreService } from "../../services/score.service"
 
 @Component({
   selector: "epf-student-details",
-  templateUrl: "./student-details.component.html",
-  styleUrls: ["./student-details.component.scss"],
+  templateUrl: "./multi-details.component.html",
+  styleUrls: ["./multi-details.component.scss"],
 })
-export class StudentDetailsComponent {
+export class MultiDetailsComponent {
   student$: Observable<Student> = this._route.data.pipe(map((data) => data["student"]))
   allMajors$: Observable<Major[]> | undefined
   allCourses$: Observable<Course[]> | undefined
-  majorSelectModel: Major | null = null
+
   courseSelectModel: Course | null = null
   notSelectedCourse: boolean | undefined
-  today = new Date(Date.now())
+
 
   constructor(
     private _route: ActivatedRoute,
     private courseService: CourseService,
-    private studentService: StudentService,
-    private majorService: MajorService,
+    private studentService: MultiService,
+    private majorService: ScoreService,
     private router: Router,
   ) {
     this.allMajors$ = this.majorService.findAll()
@@ -51,9 +51,6 @@ export class StudentDetailsComponent {
   save(student: Student) {
     const id = this._route.snapshot.params["id"]
 
-    if (this.majorSelectModel !== null) {
-      student.major = this.majorSelectModel
-    }
 
     if (id == "new") {
       this.studentService.create(student).subscribe(() => {
@@ -66,8 +63,5 @@ export class StudentDetailsComponent {
     }
   }
 
-  // because the format of the date doesn't fit date picker
-  updateBirthdate($event: any, student: Student) {
-    student.birthdate = new Date($event)
-  }
+
 }

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Game</title>
+  <link rel="stylesheet" href="game.component.scss">
+</head>
+<body>
+<div class="quiz-container">
+  <button class="theme-button" (click)="chooseTheme()">Choisir un thème</button>
+  <p *ngIf="theme" class="selected-theme">Thème sélectionné : {{ theme }}</p>
+
+  <div *ngIf="theme" class="question-section">
+    <p *ngIf="currentQuestion" class="question-text">{{ currentQuestion.question }}</p>
+    <div *ngIf="currentQuestion" class="buttons-container">
+      <button class="option-button top-left" (click)="checkAnswer(currentQuestion.options[0])">{{ currentQuestion.options[0] }}</button>
+      <button class="option-button top-right" (click)="checkAnswer(currentQuestion.options[1])">{{ currentQuestion.options[1] }}</button>
+      <button class="option-button bottom-left" (click)="checkAnswer(currentQuestion.options[2])">{{ currentQuestion.options[2] }}</button>
+      <button class="option-button bottom-right" (click)="checkAnswer(currentQuestion.options[3])">{{ currentQuestion.options[3] }}</button>
+    </div>
+  </div>
+
+  <p *ngIf="feedback" class="feedback">{{ feedback }}</p>
+  <p *ngIf="questionCount < 11" class="score">Score : {{ score }} / 10</p>
+  <p *ngIf="questionCount >= 11" class="score">Votre score final est : {{ score }} / 10</p>
+
+</div>
+</body>
+</html>
+

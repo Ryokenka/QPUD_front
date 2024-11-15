@@ -1,18 +1,18 @@
 import { Component } from "@angular/core"
 import { map, Observable } from "rxjs"
-import { Student } from "models/student.model"
+import { Student } from "models/multi.model"
 import { ActivatedRoute, Router } from "@angular/router"
-import { StudentService } from "services/student.service"
+import { MultiService } from "services/multi.service"
 
 @Component({
   selector: "epf-students",
-  templateUrl: "./students.component.html",
-  styleUrls: ["./students.component.scss"],
+  templateUrl: "./multi.component.html",
+  styleUrls: ["./multi.component.scss"],
 })
-export class StudentsComponent {
+export class MultiComponent {
   students$: Observable<Student[]> = this._route.data.pipe(map((data) => data["students"]))
 
-  constructor(private _route: ActivatedRoute, private studentService: StudentService, private router: Router,) {
+  constructor(private _route: ActivatedRoute, private studentService: MultiService, private router: Router,) {
   }
 
   deleteStudent(event: any, student: Student) {
