@@ -1,17 +1,17 @@
 import { Injectable } from "@angular/core"
 import { Observable } from "rxjs"
-import { Student } from "models/student.model"
+import { Student } from "models/multi.model"
 import { Course } from "models/course.model"
 import { HttpClient } from "@angular/common/http"
 
 @Injectable({
   providedIn: "root",
 })
-export class StudentService {
+export class MultiService {
   constructor(private http: HttpClient) {
   }
 
-  private studentsUrl = "http://localhost:8080/users"
+  private studentsUrl = "http://localhost:3000"
 
   findAll(): Observable<Student[]> {
     return this.http.get<Student[]>(this.studentsUrl)

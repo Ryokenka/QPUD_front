@@ -1,4 +1,4 @@
-import { Major } from "../major.model"
+import { Major } from "../score.model"
 import { Course } from "../course.model"
 
 export class MajorsAndCoursesDto {

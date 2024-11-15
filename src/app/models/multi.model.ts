@@ -1,5 +1,5 @@
 import { Course } from "./course.model"
-import { Major } from "./major.model"
+import { Major } from "./score.model"
 
 export interface Student {
   place: string

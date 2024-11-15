@@ -12,9 +12,9 @@ export class NavbarComponent {
   links: Link[] = []
 
   constructor() {
-    this.links.push({ name: "Solo", href: "solo" })
-    this.links.push({ name: "Multi", href: "students" })
-    this.links.push({ name: "Score", href: "majors" })
+    this.links.push({ name: "jouer seul", href: "game" })
+    this.links.push({ name: "Multi", href: "multi" })
+    this.links.push({ name: "Score", href: "score" })
 
   }
 }

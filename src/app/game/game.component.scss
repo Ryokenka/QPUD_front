@@ -1,0 +1,128 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, #f0c27b, #e0866d);
+  font-family: 'Cursive', serif;
+}
+
+.quiz-container {
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  color: #333;
+  position: relative;
+  font-family: 'Cursive', serif;
+}
+
+.theme-button {
+  padding: 12px 24px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.theme-button:hover {
+  background-color: #555;
+}
+
+.selected-theme {
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: #333;
+  font-style: italic;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.question-text {
+  font-size: 2em;
+  font-weight: bold;
+  color: #111;
+  text-align: center;
+  margin: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+.option-button {
+  padding: 12px 18px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #0a2239;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: absolute;
+}
+
+.option-button:hover {
+  background-color: #1e555c;
+}
+
+
+.top-left {
+  top: 35%;
+  left: 5%;
+}
+
+.top-right {
+  top: 35%;
+  right: 5%;
+}
+
+.bottom-left {
+  bottom: 18%;
+  left: 5%;
+}
+
+.bottom-right {
+  bottom: 18%;
+  right: 5%;
+}
+
+.feedback {
+  font-size: 1.8em;
+  color: #333;
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.score {
+  font-size: 1.5em;
+  color: #0a2239;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.score-final {
+  font-size: 2em;
+  color: #e86d3c;  /* Couleur distincte pour le score final */
+  font-weight: bold;
+  margin-top: 30px;
+}

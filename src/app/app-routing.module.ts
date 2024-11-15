@@ -1,49 +1,47 @@
 import { NgModule } from "@angular/core"
 import { RouterModule, Routes } from "@angular/router"
 import { HomeComponent } from "home/home.component"
-import { StudentsComponent } from "students/students.component"
-import { StudentsResolver } from "students/students.resolver"
-import { StudentDetailsComponent } from "students/student-details/student-details.component"
-import { StudentDetailsResolver } from "students/student-details/student-details.resolver"
-import { MajorsComponent } from "majors/majors.component"
-import { MajorsResolver } from "majors/majors.resolver"
-import { MajorStudentsResolver } from "majors/major-students/major-students.resolver"
-import { MajorStudentsComponent } from "majors/major-students/major-students.component"
+import { MultiComponent } from "multi/multi.component"
+import { MultiResolver } from "multi/multi.resolver"
+import { MultiDetailsComponent } from "multi/multi-details/multi-details.component"
+import { MultiDetailsResolver } from "multi/multi-details/multi-details.resolver"
+import { ScoreComponent } from "score/score.component"
+import { ScoreResolver } from "score/score.resolver"
+import { ScoreGameResolver } from "score/score-game/score-game.resolver"
+import { ScoreGameComponent } from "score/score-game/score-game.component"
 import { SoloComponent } from "./solo/solo.component"
+import { GameComponent } from "./game/game.component"
+
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   {
-    path: "students",
-    component: StudentsComponent,
-    resolve: {
-      students: StudentsResolver,
-    },
+    path: "multi",
+    component: MultiComponent,
+
   },
   {
-    path: "student-details/:id",
-    component: StudentDetailsComponent,
-    resolve: {
-      student: StudentDetailsResolver,
-    },
+    path: "multi-details/:id",
+    component: MultiDetailsComponent,
+
   },
   {
-    path: "majors",
-    component: MajorsComponent,
-    resolve: {
-      majors: MajorsResolver,
-    },
+    path: "score",
+    component: ScoreComponent,
+
   },
   {
-    path: "major-students/:id",
-    component: MajorStudentsComponent,
-    resolve: {
-      studentsFromMajor: MajorStudentsResolver,
-    },
+    path: "score-game/:id",
+    component: ScoreGameComponent,
+
   },
   {
     path: "solo",
     component: SoloComponent,
+  },
+  {
+    path: "game",
+    component: GameComponent,
   },
 ]
 
